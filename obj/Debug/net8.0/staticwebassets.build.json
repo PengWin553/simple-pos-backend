@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "+LBpqhvMgF/dWowHZ11KHUeGgRCVUzofyMXBldaM2aY=",
+  "Source": "simple-pos-backend",
+  "BasePath": "_content/simple-pos-backend",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
