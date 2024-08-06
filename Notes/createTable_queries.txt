@@ -2,3 +2,12 @@ CREATE TABLE Categories (
     CategoryId integer PRIMARY KEY AUTOINCREMENT,
     CategoryName text NULL
 );
+
+CREATE TABLE Products(
+    ProductId integer PRIMARY KEY AUTOINCREMENT,
+    ProductName text NULL,
+    Price real NULL,
+    Stock integer NULL,
+    Unit text NULL,
+    CategoryId integer NULL
+);
