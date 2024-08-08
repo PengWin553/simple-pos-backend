@@ -1,9 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
 using Dapper;
 using Microsoft.Data.Sqlite;
+using Microsoft.AspNetCore.Authorization;
 
 namespace simple_pos_backend.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class CategoryApiController : ControllerBase
@@ -24,7 +26,7 @@ namespace simple_pos_backend.Controllers
         }
 
         // get specified category
-        [HttpGet("GetCategory")]
+        [HttpGet("GetCategory{categoryId}")]
         public async Task<ActionResult<Category>> GetCategory(int categoryId){
 
             const string query = "Select * from Categories where CategoryId = @CategoryId LIMIT 1";

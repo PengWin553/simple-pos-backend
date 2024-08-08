@@ -1,9 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
 using Dapper;
 using Microsoft.Data.Sqlite;
+using Microsoft.AspNetCore.Authorization;
 
 namespace simple_pos_backend.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class ProductApiController : ControllerBase
@@ -24,7 +26,7 @@ namespace simple_pos_backend.Controllers
         }
 
         // get specified product
-        [HttpGet("GetProduct")]
+        [HttpGet("GetProduct{productId}")]
         public async Task<ActionResult<Product>> GetProduct(int productId){
 
             const string query = "Select * from Products where ProductId = @ProductId LIMIT 1";
