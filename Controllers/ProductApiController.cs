@@ -5,7 +5,6 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace simple_pos_backend.Controllers
 {
-    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class ProductApiController : ControllerBase
