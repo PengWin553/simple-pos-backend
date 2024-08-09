@@ -9,5 +9,6 @@ CREATE TABLE Products(
     Price real NULL,
     Stock integer NULL,
     Unit text NULL,
+    SKU text NULL,
     CategoryId integer NULL
 );

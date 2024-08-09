@@ -41,7 +41,7 @@ namespace simple_pos_backend.Controllers
         // create product
         [HttpPost("SaveProduct")]
         public async Task<IActionResult> SaveProductAsync(Product product){
-            const string query = "Insert into Products (ProductName, Price, Stock, Unit, CategoryId) Values (@ProductName, @Price, @Stock, @Unit, @CategoryId); Select * from Products order by ProductId desc Limit 1";
+            const string query = "Insert into Products (ProductName, Price, Stock, Unit, Sku, CategoryId) Values (@ProductName, @Price, @Stock, @Unit, @Sku, @CategoryId); Select * from Products order by ProductId desc Limit 1";
             var result  = await _connection.QueryAsync<Product>(query, product);
             return Ok(result);
         }
