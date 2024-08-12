@@ -12,3 +12,17 @@ CREATE TABLE Products(
     SKU text NULL,
     CategoryId integer NULL
 );
+
+CREATE TABLE Transactions (
+    TransactionId integer PRIMARY KEY AUTOINCREMENT,
+    TransactionDate TEXT DEFAULT CURRENT_TIMESTAMP,
+    TotalAmount real NOT NULL,
+    TransactionProduct text NOT NULL
+);
+
+CREATE TABLE TransactionProduct (
+	TransactionProductId PRIMARY KEY AUTOINCREMENT,
+	ProductName	text NULL,
+	Price real NULL,
+	Quantity integer NULL
+);
