@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Dapper;
 using Microsoft.Data.Sqlite;
 using Microsoft.AspNetCore.Authorization;
+using simple_pos_backend.Models;
 
 namespace simple_pos_backend.Controllers
 {

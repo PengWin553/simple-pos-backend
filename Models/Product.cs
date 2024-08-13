@@ -1,10 +1,13 @@
-public class Product
+namespace simple_pos_backend.Models
 {
-    public int ProductId { get; set; }
-    public string? ProductName { get; set; }
-    public float? Price { get; set; }
-    public int? Stock { get; set; }
-    public string? Unit { get; set; }
-    public string? Sku { get; set; }
-    public int? CategoryId { get; set; }
+    public class Product
+    {
+        public int ProductId { get; set; }
+        public string? ProductName { get; set; }
+        public float? Price { get; set; }
+        public int? Stock { get; set; }
+        public string? Unit { get; set; }
+        public string? Sku { get; set; }
+        public int? CategoryId { get; set; }
+    }
 }
